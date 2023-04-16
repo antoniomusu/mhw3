@@ -1,0 +1,276 @@
+
+body {
+    margin: 0;
+    font-family: 'Source Serif Pro', serif;   
+    background-color: #C2DFE3;
+
+}
+
+.header {
+    position: relative;
+    /*Modifica il comportamento dei figli rispetto all'header*/
+    height: 256px;
+    background-image: url("restaurant-mural-wallpaper_23-2148703851.avif");
+    background-size: cover;
+    /*Espande in modo sensato*/
+    border-bottom:solid #E0FBFC 3px;
+
+}
+
+.header> .flextitle {
+    /*Selettore per figli diretti*/
+    display: flex;
+    position: absolute;
+    /*Modifica il comportamento in relazione alla posizione assoluta nella pagina*/
+    /*Modifico altezza e larghezza in corrispondenza all'header*/
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    justify-content: center;
+    align-items: center;
+}
+
+.flextitle h1{
+    max-width: 780px;
+    color:#E0FBFC;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+#menu {
+    display: none;
+    margin-left: 10px;
+    margin-top: 40px;
+    }
+    
+#menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #5C6B73;
+    margin-top: 5px;
+}
+
+#modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .9) ;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal a{
+ text-decoration: none;
+ color: black;
+ font-size: 1em;
+}
+
+#modal a:hover{
+    color: grey;
+}
+
+#modal img{
+    border: solid black 5px;
+}
+
+#modal div{
+    background-color: #E0FBFC;
+    padding: 1em;
+    text-align: center;
+    border: solid #5C6B73 3px;
+}
+
+
+#modal p{
+    color:black;
+    font-size: 1em;
+    width: 50vw;
+    height: 190px !important;
+    overflow-y: auto;
+    white-space: pre-line;
+    text-align: left;
+    line-height: 2em;
+}
+
+.navbar {
+    display: flex;
+    flex-flow: column;
+    color: #fefefe;
+    background-color: #5C6B73;
+    width: 10em;
+    border-right: solid #E0FBFC 3px;
+    justify-content: top;
+    /*Ancoro al lato sinistro la navbar anche in navigazione */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+
+}
+
+.navbar img{
+    margin: 2.5em;
+}
+
+.logo{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:-50px;
+}
+
+.logo img {
+    border-radius: 100%;
+    border: solid 3px #E0FBFC;
+    width: auto;
+    height: 100px;
+    z-index: 1;
+    
+}
+.logo div{
+    font-size: 1.3em;
+    color:#5C6B73;
+    font-family: 'Source Serif Pro', serif;
+    font-style: italic;
+    font-weight: bolder;
+    
+}
+
+.logo a:visited{
+    color: #5C6B73;
+}
+
+.content{
+    width: 66.67%;
+    margin: 1em auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 30vh;
+}
+
+.content div {
+    width: 20%;
+    background-color: #5C6B73;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 1em;
+    margin: 1em 0.2em;
+    border: 2px solid #E0FBFC;
+}
+
+.content div:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.content img{
+    width: 80%;
+    object-fit: contain;
+}
+
+.content h1{
+    text-align: center;
+    color: #E0FBFC;
+
+}
+ 
+.nome a {
+    text-decoration: none;
+    /*Tolgo la sottolineatura*/
+}
+
+#search{
+    width: 80%;
+    margin-bottom: 1em;
+}
+.footer {
+    position: relative;
+    background-color: #253237;
+    height: auto;
+    color: #E0FBFC;
+    line-height: 20px;
+    text-align: center;
+    padding: 2em 0;
+    border-top: solid #E0FBFC 3px;
+    margin-top: 4em;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+
+}
+
+.footer div{
+    font-weight:bolder;  
+}
+
+.footer img{
+    position: absolute;
+    width: 10em;
+    right: 0px;
+    bottom: 15px;
+    filter:invert(85%);
+}
+
+@media(max-width: 1155px){
+
+    .navbar{
+        display: none;
+        }
+
+    #menu{
+        display: block;
+        z-index: 9999;
+    }
+
+    body {
+        font-size: 14px;
+        }
+
+    .header{
+        height:100px;
+    }
+    
+    .content{
+        padding: 0 1.5em;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .footer img{
+        position: static;
+    }
+
+    .logo{
+        margin-bottom:60px;
+        margin-top:-6em;
+    }
+    .flexrow{
+        margin-left: 0;
+        gap: 10px;
+    }
+}
+@media(min-width:1300px){
+    .navbar {
+        width: 14em;
+    }
+}
