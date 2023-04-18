@@ -43,6 +43,16 @@ body {
     overflow: hidden;
 }
 
+#like{
+    margin-left: 30em;
+    width: 2em;
+    border: none !important;
+}
+
+#like:hover{
+    cursor: pointer;
+}
+
 #menu {
     display: none;
     margin-left: 10px;
